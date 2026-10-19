@@ -3,24 +3,24 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Cargar dataset
-df = pd.read_csv(r"C:\Users\Alexandra\Downloads\Software_Defect_Prediction_Dataset.csv")
+df = pd.read_csv(r"...\Software_Defect_Prediction_Dataset.csv")
 
 # Configuración de estilo
 sns.set(style="whitegrid")
 
 plt.figure(figsize=(10,6))
 
-# Scatter plot mejorado
+# Scatter plot
 sns.scatterplot(
     x="loc",
     y="method_count",
     hue="defect_label",
     size="fan_out",
     data=df,
-    alpha=0.7,  # transparencia para evitar saturación
-    sizes=(40, 300),  # rango de tamaños más equilibrado
-    edgecolor="black",  # bordes para distinguir puntos
-    palette={"Buggy": "red", "Clean": "blue"}  # paleta intencional
+    alpha=0.7,
+    sizes=(40, 300),
+    edgecolor="black",
+    palette={"Buggy": "red", "Clean": "blue"}
 )
 
 # Título y etiquetas claras

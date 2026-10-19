@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Cargar dataset
-df = pd.read_csv(r"C:\Users\Alexandra\Downloads\Software_Defect_Prediction_Dataset.csv")
+df = pd.read_csv(r"...\Software_Defect_Prediction_Dataset.csv")
 
 # Configuración de estilo
 sns.set(style="whitegrid")
@@ -18,7 +18,7 @@ sns.histplot(
     bins=40,
     palette={"Buggy": "red", "Clean": "blue"},
     alpha=0.5,
-    element="step"   # bordes definidos para las barras
+    element="step"
 )
 
 # Añadir líneas KDE (curvas de densidad) para cada categoría

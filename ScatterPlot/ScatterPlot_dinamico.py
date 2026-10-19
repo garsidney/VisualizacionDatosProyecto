@@ -1,7 +1,8 @@
 import plotly.express as px
 import pandas as pd
 
-df = pd.read_csv(r"C:\Users\Alexandra\Downloads\Software_Defect_Prediction_Dataset.csv")
+# Cargar dataset
+df = pd.read_csv(r"...\Software_Defect_Prediction_Dataset.csv")
 
 # Crear nueva variable de ciclos
 df["loop_count"] = df["for_loop_count"] + df["while_loop_count"]
